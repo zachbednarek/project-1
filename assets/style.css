@@ -1,0 +1,22 @@
+.mini-logo {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  box-shadow: none;
+}
+
+img {
+  display: flex;
+  margin: 5px auto;
+  height: 450px;
+  width: 1400px;
+  transform: rotate(1.5deg);
+  box-shadow: 10px 10px 5px;
+  margin: 20px;
+}
+
+.center-align {
+  border: 5px solid yellow;
+  padding: 25px;
+  margin: 20px;
+}

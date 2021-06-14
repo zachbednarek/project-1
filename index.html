@@ -1,38 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="semantic/dist/semantic.min.css" -->
+    />
     <script
-      src="https://code.jquery.com/jquery-3.5.1.min.js"
-      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"
     ></script>
+    <!-- <script src="semantic/dist/semantic.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
 
-    <title>Music Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
   </head>
-  <body>
-    <h1></h1>
 
-    <section class="jumbotron jumbotron-fluid custom-jumbotron">
-        <div class="container col-8 center">
-          <h1 class="col text-center">
-            Music Search
-          </h1>
-          <p class="lead"><div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Artist or Band</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">Search an artist or a band to see their top songs on the Apple Music Charts.</div>
-          </div>
-          </p>
-        </div>>
+  <body class="grey darken-4 white-text">
+    <title>Movie Surf</title>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
+    <nav>
+      <div class="nav-wrapper red darken-4">
+        <a class="brand-logo col s2">And Action!</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="#artist-search">Search</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- <img src="AndAction.jpg" alt="logo" /> -->
+    <div class="center-align">
+      <h1>Film Search</h1>
+      <!-- <img src="AndActionMini.jpg" class="mini-logo circle responsive-img" /> -->
+      <div class="row">
+        <div
+          class="card-panel red darken-4 col s8 push-s2 center-align"
+          id="user-form"
+        >
+          <form id="search-form">
+            <p>What are you looking for?</p>
+            <div class="col s6 push-s3">
+              <input
+                type="search"
+                class="form-control"
+                id="show-search"
+                aria-describedby="artist-search"
+                required="required"
+              />
+            </div>
+            <div class="col s3 push-s3">
+              <button
+                id="search-button"
+                type="submit"
+                class="btn btn-primary yellow darken-1 text-dark"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <span id="show-container"></span>
   </body>
+  <script src="./assets/script.js"></script>
 </html>
