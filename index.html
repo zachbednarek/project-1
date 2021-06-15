@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+
+  <body class="grey darken-4 white-text">
+    <title>Movie Surf</title>
+
+    <nav>
+      <div class="nav-wrapper red darken-4">
+        <a class="brand-logo col s2">And Action!</a>
+        <ul id="nav-mobile" class="right"></ul>
+      </div>
+    </nav>
+    <div class="center-align">
+      <h1>Film Search</h1>
+      <div class="row">
+        <div
+          class="card-panel red darken-4 col s8 push-s2 center-align"
+          id="user-form"
+        >
+          <form id="search-form">
+            <p>What are you looking for?</p>
+            <div class="col s6 push-s3">
+              <input
+                type="search"
+                class="form-control"
+                id="show-search"
+                aria-describedby="show-search"
+                required="required"
+              />
+            </div>
+            <div class="col s3 push-s3">
+              <button
+                id="search-button"
+                type="submit"
+                class="btn btn-primary yellow darken-1 text-dark"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <span id="show-container"></span>
+
+    <span id="related-container"></span>
+  </body>
+  <script src="./assets/script.js"></script>
+</html>
