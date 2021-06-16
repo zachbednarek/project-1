@@ -61,7 +61,29 @@ var getShowData = function (data) {
             }
         })
 
-    returnContainerEl.textContent = data.name + ' ' + data.premiered + ' ' + data.rating.average + ' ' + data.summary
+    data.name + ' ' + data.premiered + ' ' + data.rating.average + ' ' + data.summary
+
+    var header = document.createElement("H1");                 
+    var headerText = document.createTextNode(data.name);         
+    header.appendChild(headerText);                              
+    document.getElementById("show-container").appendChild(header);
+
+    var premiered = document.createElement("H2");
+    var premieredText = document.createTextNode(data.premiered + ' - Premiere Date.');
+    premiered.appendChild(premieredText);
+    document.getElementById("show-container").appendChild(premiered);
+
+    var rating = document.createElement("H3");
+    var ratingText = document.createTextNode(data.rating.average + ' - Rating.');
+    rating.appendChild(ratingText);
+    document.getElementById("show-container").appendChild(rating);
+
+    var summary = document.createElement("P3");
+    var summaryText = document.createTextNode(data.summary);
+    summary.appendChild(summaryText);
+    document.getElementById("show-container").appendChild(summary);
+
+
 
     
 }
@@ -83,7 +105,17 @@ var getRelatedData = function (data) {
                             console.log(detailsData.Similar.Results[i].Name)
                             simstring += detailsData.Similar.Results[i].Name
                     }
-                        relatedContainerEl.textContent = simstring;
+
+                        // var simArray = simstring.trim().split("\\s+");
+
+                        // // relatedContainerEl.textContent = simstring;
+
+                        // console.log(simArray);
+
+                        var relatedList = document.createElement("LI");
+                        var relatedListText = document.createTextNode(simstring);
+                        relatedList.appendChild(relatedListText);
+                        document.getElementById("related-container").appendChild(relatedList);
             }
         }); 
                 
@@ -94,6 +126,7 @@ var getRelatedData = function (data) {
 
         
 }
+
 
 
 
