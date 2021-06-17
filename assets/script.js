@@ -31,7 +31,7 @@ var formSubmit = function (event) {
 
 // Retrieving show information from tvmaze based on the input of the search field in the html.
 var showSearch = function (input) {
-    var getApi = 'http://api.tvmaze.com/singlesearch/shows?q=' + encodeURI(input) + '';
+    var getApi = 'https://api.tvmaze.com/singlesearch/shows?q=' + encodeURI(input) + '';
 
     fetch(getApi)
         .then (function (response) {
@@ -49,7 +49,7 @@ var showSearch = function (input) {
 // Selecting specific show data to render to html.
 var getShowData = function (data) {
     
-    fetch('http://api.tvmaze.com/shows/' + data.id + '')
+    fetch('https://api.tvmaze.com/shows/' + data.id + '')
         .then (function (response) {
             if (response.ok) {
                 response.json().then(function (detailsData) {
@@ -91,7 +91,7 @@ var getShowData = function (data) {
 // Takes search input and also applies it to the second API request to pull similar show data.
 var getRelatedData = function (data) {
 
-    var getApi = 'https://cors-anywhere.herokuapp.com/http://tastedive.com/api/similar?q=' + encodeURI(showInputEl.value) + '';
+    var getApi = 'https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=' + encodeURI(showInputEl.value) + '';
 
     fetch(getApi)
         .then (function (response) {
